@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <div th:insert="blocks/headers :: header"></div>
+</head>
+
+<body>
+    <div class="align-ch">
+        <h2>&#128195; List of questions</h2>
+        <form th:action="@{/quiz}" th:object="${answer}" method="post">
+            <table>
+                <tbody>
+                    <!-- Full name -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Full name</td>
+                        <td class="align-l"><input class="input" type="text" placeholder="Name Surname"
+                                                   th:field="*{fullName}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('fullName')}"
+                                             th:errors="*{fullName}"></div></td>
+                    </tr>
+                    <!-- Email -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Email</td>
+                        <td class="align-l"><input class="input" type="text" placeholder="name@email.org"
+                                                   th:field="*{email}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('email')}"
+                                             th:errors="*{email}"></div></td>
+                    </tr>
+                    <!-- Phone number -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Phone number</td>
+                        <td class="align-l"><input class="input wid-15ch" type="tel" placeholder="+0000000000000"
+                                                   th:field="*{phoneNum}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('phoneNum')}"
+                                             th:errors="*{phoneNum}"></div></td>
+                    </tr>
+                    <!-- Date of birth -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Date of birth</td>
+                        <td class="align-l"><input class="input" type="date" th:field="*{dateBirth}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('dateBirth')}"
+                                             th:errors="*{dateBirth}"></div></td>
+                    </tr>
+                    <!-- Married -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Married</td>
+                        <td class="align-l"><input class="input" type="checkbox" th:field="*{married}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('married')}"
+                                             th:errors="*{married}"></div></td>
+                    </tr>
+                    <!-- Amount of children -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Amount of children</td>
+                        <td class="align-l"><input class="input wid-4ch" type="number" placeholder="00"
+                                                   th:field="*{childAmount}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('childAmount')}"
+                                             th:errors="*{childAmount}"></div></td>
+                    </tr>
+                    <!-- Salary per month ($) -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Salary per month ($)</td>
+                        <td class="align-l"><input class="input wid-7ch" type="number" placeholder="000000"
+                                                   th:field="*{salaryMonth}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('salaryMonth')}"
+                                             th:errors="*{salaryMonth}"></div></td>
+                    </tr>
+                    <!-- Температура тела (℃) -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Body temperature (℃)</td>
+                        <td class="align-l"><input class="input wid-4ch" type="number" placeholder="00,0" step="0.1"
+                                                   th:field="*{bodyTemp}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('bodyTemp')}"
+                                             th:errors="*{bodyTemp}"></div></td>
+                    </tr>
+                    <!-- Wake up time -->
+                    <tr>
+                        <td class="align-r pr5 bld20">Wake up time</td>
+                        <td class="align-l"><input class="input" type="time" th:field="*{timeWakeUp}"></td>
+                    </tr>
+                    <tr>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('timeWakeUp')}"
+                                             th:errors="*{timeWakeUp}"></div></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><input class="btn-g" type="submit" value="Send"></p>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin panel</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <div th:insert="blocks/headers :: header"></div>
+</head>
+
+<body>
+    <h2 class="align-ch">&#128194; Answers received</h2>
+    <div th:switch="${!#lists.isEmpty(answers)}">
+        <h3 class="align-ch" th:case="false">No answers</h3>
+        <div th:case="*">
+            <table class="tbl-1400px">
+                <thead>
+                    <tr>
+                        <th class="th-bp">Full name</th>
+                        <th class="th-bp">Email</th>
+                        <th class="th-bp">Phone number</th>
+                        <th class="th-bp">Date of birth</th>
+                        <th class="th-bp">Married</th>
+                        <th class="th-bp">Amount of children</th>
+                        <th class="th-bp">Salary per month ($)</th>
+                        <th class="th-bp">Body temperature (℃)</th>
+                        <th class="th-bp">Wake up time</th>
+                        <th class="th-bp">Date and time of passage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="answer : ${answers}">
+                        <td class="td-bp" th:text="${answer.fullName}"></td>
+                        <td class="td-bp" th:text="${answer.email}"></td>
+                        <td class="td-bp" th:text="${answer.phoneNum}"></td>
+                        <td class="td-bp" th:text="${#dates.format(answer.dateBirth, 'dd.MM.yyyy')}"></td>
+                        <td class="td-bp">
+                            <div th:if="${#bools.isTrue(answer.married)}">Yes</div>
+                            <div th:if="${#bools.isFalse(answer.married)}">No</div>
+                        </td>
+                        <td class="td-bp" th:text="${answer.childAmount}"></td>
+                        <td class="td-bp" th:text="${answer.salaryMonth}"></td>
+                        <td class="td-bp" th:text="${#numbers.formatDecimal(answer.bodyTemp, 2, 'POINT', 1, 'COMMA')}">
+                        </td>
+                        <td class="td-bp" th:text="${answer.timeWakeUp}"></td>
+                        <td class="td-bp" th:text="${#calendars.format(answer.dateTimePassage, 'dd.MM.yyyy HH:mm:ss')}">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="align-ch"><input class="btn-r" type="button" onclick="location.href='/logout'" value="Sign out"></p>
+    </div>
+</body>
+
+</html>

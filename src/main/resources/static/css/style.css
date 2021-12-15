@@ -1,0 +1,171 @@
+/* ------------------------------ */
+/* Tags */
+/* ------------------------------ */
+html {
+    font-family: Arial, serif;
+    font-size: 18px;
+}
+
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: silver;
+}
+
+a {
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+    color: royalblue;
+}
+
+a:hover {
+    text-shadow: 1px 1px 3px black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type=checkbox] {
+    height: 18px;
+    width: 18px;
+}
+
+/* ------------------------------ */
+/* Classes */
+/* ------------------------------ */
+.align-ch {
+    text-align: center;
+}
+
+.align-r {
+    text-align: right;
+}
+
+.align-l {
+    text-align: left;
+}
+
+a.bk {
+    text-shadow: none;
+    color: black;
+}
+
+.input {
+    font-family: Arial, serif;
+    font-size: 18px;
+    border: 2px solid black;
+}
+
+.input:focus {
+    box-shadow: 1px 1px 8px green;
+}
+
+.input.wid-4ch {
+    width: 4ch;
+}
+
+.input.wid-7ch {
+    width: 7ch;
+}
+
+.input.wid-15ch {
+    width: 15ch;
+}
+
+.tbl-1400px {
+    width: 1400px;
+    border-collapse: collapse;
+}
+
+.th-bp {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+.td-bp {
+    border: 2px solid black;
+    padding: 5px;
+    word-wrap: break-word;
+}
+
+.g {
+    color: green;
+}
+
+.bld20 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.r16 {
+    color: red;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px black;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.btn-g {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    background-color: limegreen;
+    box-shadow: 0 2px darkgreen;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}
+
+.btn-g:hover {
+    background-color: lawngreen;
+}
+
+.btn-r {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    background-color: indianred;
+    box-shadow: 0 2px darkred;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: top;
+}
+
+.btn-r:hover {
+    background-color: orangered;
+}
