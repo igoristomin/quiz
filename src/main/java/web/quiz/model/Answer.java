@@ -1,5 +1,6 @@
 package web.quiz.model;
 
+import com.opencsv.bean.CsvDate;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -38,6 +39,7 @@ public class Answer {
     @NotNull
     private String phoneNum;
 
+    @CsvDate(value = "dd.MM.yyyy")
     @Past(message = "* Enter the date in the past tense")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @NotNull(message = "* Fill in the field")
@@ -62,6 +64,7 @@ public class Answer {
     private LocalTime timeWakeUp;
 
     // Set the current date and time of the quiz
+    @CsvDate(value = "dd.MM.yyyy HH:mm:ss")
     @NotNull
     private Calendar dateTimePassage = Calendar.getInstance();
 
