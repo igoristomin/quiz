@@ -9,7 +9,7 @@ to view poll results.
 * Builder: Gradle
 * Database: PostgreSQL 14
 * Languages: Java 8 (SDK 1.8), HTML5, CSS3
-* Dependencies: Spring Data JPA, Spring Security, Thymeleaf, Validation, Spring Web, Lombok, PostgreSQL Driver
+* Dependencies: Spring Data JPA, Spring Security, Thymeleaf, Validation, Spring Web, OpenCSV, Lombok, PostgreSQL Driver
 
 ## Important files
 * Builder configuration: \build.gradle
