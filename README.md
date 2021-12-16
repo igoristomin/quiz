@@ -1,8 +1,8 @@
 # Quiz
 
 ## Description
-Conducting a quiz and issuing a list of answers in a readable form. Spring Security implements in memory authorization
-to view poll results.
+Conducting a quiz, issuing a list of answers in a readable form and exporting to CSV. Spring Security implements in
+memory authorization to view poll results.
 
 ## Used tools
 * Platform: Spring Boot 2.6.1
