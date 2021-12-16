@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import web.quiz.model.Answer;
 import web.quiz.service.CombineService;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 @Controller
@@ -51,6 +52,14 @@ public class MainController {
     @GetMapping("/admin")
     public String showAdmin(Model model) {
         return combineService.combineShowAdmin(model);
+    }
+
+//    ------------------------------
+//    /admin/export-csv
+//    ------------------------------
+    @GetMapping("/admin/export-csv")
+    public void exportCsv(HttpServletResponse response) throws Exception {
+        combineService.combineExportCsv(response);
     }
 
 }
