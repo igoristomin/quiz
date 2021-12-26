@@ -62,9 +62,9 @@
                         <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('married')}"
                                              th:errors="*{married}"></div></td>
                     </tr>
-                    <!-- Amount of children -->
+                    <!-- Children amount -->
                     <tr>
-                        <td class="align-r pr5 bld20">Amount of children</td>
+                        <td class="align-r pr5 bld20">Children amount</td>
                         <td class="align-l"><input class="input wid-4ch" type="number" placeholder="00"
                                                    th:field="*{childAmount}"></td>
                     </tr>
@@ -82,7 +82,7 @@
                         <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('salaryMonth')}"
                                              th:errors="*{salaryMonth}"></div></td>
                     </tr>
-                    <!-- Температура тела (℃) -->
+                    <!-- Body temperature (℃) -->
                     <tr>
                         <td class="align-r pr5 bld20">Body temperature (℃)</td>
                         <td class="align-l"><input class="input wid-4ch" type="number" placeholder="00,0" step="0.1"
@@ -92,9 +92,9 @@
                         <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('bodyTemp')}"
                                              th:errors="*{bodyTemp}"></div></td>
                     </tr>
-                    <!-- Wake up time -->
+                    <!-- Wake-up time -->
                     <tr>
-                        <td class="align-r pr5 bld20">Wake up time</td>
+                        <td class="align-r pr5 bld20">Wake-up time</td>
                         <td class="align-l"><input class="input" type="time" th:field="*{timeWakeUp}"></td>
                     </tr>
                     <tr>
