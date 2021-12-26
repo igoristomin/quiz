@@ -12,9 +12,9 @@ memory authorization to view poll results.
 * Dependencies: Spring Data JPA, Spring Security, Thymeleaf, Validation, Spring Web, OpenCSV, Lombok, PostgreSQL Driver
 
 ## Important files
-* Builder configuration: \build.gradle
-* Application properties: \src\main\resources\application.properties
-* Security configuration: \src\main\java\web\quiz\config\WebSecurityConfig.java
+* Builder configuration: /build.gradle
+* Application properties: /src/main/resources/application.properties
+* Security configuration: /src/main/java/web/quiz/config/WebSecurityConfig.java
 
 ## Backend schema
 * MainController <- CombineService <- AnswerRepository <- quiz (database) <- Answer
@@ -24,7 +24,7 @@ memory authorization to view poll results.
 2. Run this project in development environment
 3. Open http://localhost:8081 in browser
 
-## Release Notes
+## Release notes
 * Project type: Web application
 * Date of release: 15 December 2021
 * Date of last update: 16 December 2021
