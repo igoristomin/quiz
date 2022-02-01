@@ -1,21 +1,26 @@
 package web.quiz.controller;
 
+import com.opencsv.CSVWriter;
+import com.opencsv.bean.StatefulBeanToCsv;
+import com.opencsv.bean.StatefulBeanToCsvBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import web.quiz.model.Answer;
-import web.quiz.service.CombineService;
+import web.quiz.repository.AnswerRepository;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 public class MainController {
 
     @Autowired
-    private CombineService combineService;
+    private AnswerRepository answerRepository;
 
 //    ------------------------------
 //    /
@@ -35,7 +40,9 @@ public class MainController {
 
     @PostMapping("/quiz")
     public String postQuiz(@Valid Answer answer, BindingResult result, Model model) {
-        return combineService.combinePostQuiz(answer, result, model);
+        if (result.hasErrors()) return "quiz";
+        answerRepository.save(answer);
+        return "redirect:/passed";
     }
 
 //    ------------------------------
@@ -51,7 +58,8 @@ public class MainController {
 //    ------------------------------
     @GetMapping("/admin")
     public String showAdmin(Model model) {
-        return combineService.combineShowAdmin(model);
+        model.addAttribute("answers", answerRepository.findAll());
+        return "admin";
     }
 
 //    ------------------------------
@@ -59,7 +67,22 @@ public class MainController {
 //    ------------------------------
     @GetMapping("/admin/export-csv")
     public void exportCsv(HttpServletResponse response) throws Exception {
-        combineService.combineExportCsv(response);
+        // Set the file name
+        final String fileName = "answers.csv";
+
+        // Set content type and header
+        response.setContentType("text/csv; charset=UTF-8");
+        response.setHeader(HttpHeaders.CONTENT_DISPOSITION,"attachment; filename=" + fileName);
+
+        // Create CSV writer
+        StatefulBeanToCsv<Answer> writer = new StatefulBeanToCsvBuilder<Answer>(response.getWriter())
+                .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
+                .withSeparator(';')
+                .withOrderedResults(true)
+                .build();
+
+        // Export records to a file
+        writer.write((List<Answer>) answerRepository.findAll());
     }
 
 }
