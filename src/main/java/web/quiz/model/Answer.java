@@ -39,7 +39,7 @@ public class Answer {
     @NotNull
     private String phoneNum;
 
-    @CsvDate(value = "dd.MM.yyyy")
+    @CsvDate(value = "yyyyMMdd")
     @Past(message = "* Enter the date in the past tense")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @NotNull(message = "* Fill in the field")
@@ -64,7 +64,7 @@ public class Answer {
     private LocalTime timeWakeUp;
 
     // Set the current date and time of the quiz
-    @CsvDate(value = "dd.MM.yyyy HH:mm:ss")
+    @CsvDate()
     @NotNull
     private Calendar dateTimePassage = Calendar.getInstance();
 
