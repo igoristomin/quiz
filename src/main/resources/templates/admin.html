@@ -33,7 +33,7 @@
                         <td class="td-bp" th:text="${answer.fullName}"></td>
                         <td class="td-bp" th:text="${answer.email}"></td>
                         <td class="td-bp" th:text="${answer.phoneNum}"></td>
-                        <td class="td-bp" th:text="${#dates.format(answer.dateBirth, 'dd.MM.yyyy')}"></td>
+                        <td class="td-bp" th:text="${#dates.format(answer.dateBirth, 'yyyy-MM-dd')}"></td>
                         <td class="td-bp">
                             <div th:if="${#bools.isTrue(answer.married)}">Yes</div>
                             <div th:if="${#bools.isFalse(answer.married)}">No</div>
@@ -43,7 +43,7 @@
                         <td class="td-bp" th:text="${#numbers.formatDecimal(answer.bodyTemp, 2, 'POINT', 1, 'COMMA')}">
                         </td>
                         <td class="td-bp" th:text="${answer.timeWakeUp}"></td>
-                        <td class="td-bp" th:text="${#calendars.format(answer.dateTimePassage, 'dd.MM.yyyy HH:mm:ss')}">
+                        <td class="td-bp" th:text="${#calendars.format(answer.dateTimePassage, 'yyyy-MM-dd HH:mm:ss')}">
                         </td>
                     </tr>
                 </tbody>
