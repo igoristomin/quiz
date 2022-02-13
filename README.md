@@ -14,7 +14,7 @@ memory authorization to view poll results.
 ## Important files
 * Builder configuration: /build.gradle
 * Application properties: /src/main/resources/application.properties
-* Security configuration: /src/main/java/web/quiz/config/WebSecurityConfig.java
+* Security configuration: /src/main/java/web/quiz/config/SecurityConfig.java
 
 ## Backend schema
 ![Element relationships](readme/back-schema.svg)
