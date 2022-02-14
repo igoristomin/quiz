@@ -16,7 +16,7 @@ memory authorization to view poll results.
 * Application properties: /src/main/resources/application.properties
 * Security configuration: /src/main/java/web/quiz/config/SecurityConfig.java
 
-## Backend schema
+## Frontend and backend schema
 ![Element relationships](readme/back-schema.svg)
 
 ## Installation
