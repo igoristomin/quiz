@@ -17,7 +17,7 @@ memory authorization to view poll results.
 * Security configuration: /src/main/java/web/quiz/config/SecurityConfig.java
 
 ## Frontend and backend schema
-![Element relationships](readme/back-schema.svg)
+![Element relationships](readme/front-back-schema.svg)
 
 ## Installation
 1. Create quiz database in PostgreSQL
