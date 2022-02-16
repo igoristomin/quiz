@@ -8,7 +8,7 @@ memory authorization to view poll results.
 * Platform: Spring Boot 2.6.1
 * Builder: Gradle
 * Database: PostgreSQL 14
-* Languages: Java 8 (SDK 1.8), HTML5, CSS3
+* Languages: Java 8 (JDK 8), HTML5, CSS3
 * Dependencies: Spring Data JPA, Spring Security, Thymeleaf, Validation, Spring Web, OpenCSV, Lombok, PostgreSQL Driver
 
 ## Important files
