@@ -51,7 +51,7 @@ public class Answer {
     @NotNull(message = "* Fill in the field")
     private Byte childAmount;
 
-    @Range(min = 0, max = 999999, message = "* Enter a value between 0 and 999999")
+    @Range(min = 0, max = 999999999, message = "* Enter a value between 0 and 999999999")
     @NotNull(message = "* Fill in the field")
     private Integer salaryMonth;
 
