@@ -27,5 +27,5 @@ memory authorization to view poll results.
 ## Release notes
 * Project type: Web application
 * Date of release: 15 December 2021
-* Date of last update: 16 February 2022
-* Current version: 1.6
+* Date of last update: 28 March 2022
+* Current version: 1.7
