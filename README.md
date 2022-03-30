@@ -29,3 +29,6 @@ memory authorization to view poll results.
 * Date of release: 15 December 2021
 * Date of last update: 28 March 2022
 * Current version: 1.7
+
+---
+Author [Igor Istomin](https://github.com/igoristomin)
