@@ -40,7 +40,7 @@ public class MainController {
 
     @PostMapping("/quiz")
     public String postQuiz(@Valid Answer answer, BindingResult result, Model model) {
-        if (result.hasErrors()) return "quiz";
+        if(result.hasErrors()) return "quiz";
         answerRepository.save(answer);
         return "redirect:/passed";
     }
