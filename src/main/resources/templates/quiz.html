@@ -95,11 +95,11 @@
                     <!-- Wake-up time -->
                     <tr>
                         <td class="align-r pr5 bld20">Wake-up time</td>
-                        <td class="align-l"><input class="input" type="time" th:field="*{timeWakeUp}"></td>
+                        <td class="align-l"><input class="input" type="time" th:field="*{wakeUpTime}"></td>
                     </tr>
                     <tr>
-                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('timeWakeUp')}"
-                                             th:errors="*{timeWakeUp}"></div></td>
+                        <td class="pb5" colspan="2"><div class="r16" th:if="${#fields.hasErrors('wakeUpTime')}"
+                                             th:errors="*{wakeUpTime}"></div></td>
                     </tr>
                 </tbody>
             </table>

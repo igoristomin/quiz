@@ -42,7 +42,7 @@
                         <td class="td-bp" th:text="${answer.salary}"></td>
                         <td class="td-bp" th:text="${#numbers.formatDecimal(answer.bodyTemp, 2, 'POINT', 1, 'COMMA')}">
                         </td>
-                        <td class="td-bp" th:text="${answer.timeWakeUp}"></td>
+                        <td class="td-bp" th:text="${answer.wakeUpTime}"></td>
                         <td class="td-bp" th:text="${#calendars.format(answer.dateTimePassage, 'yyyy-MM-dd HH:mm:ss')}">
                         </td>
                     </tr>

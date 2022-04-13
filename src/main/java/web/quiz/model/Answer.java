@@ -61,7 +61,7 @@ public class Answer {
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     @NotNull(message = "* Fill in the field")
-    private LocalTime timeWakeUp;
+    private LocalTime wakeUpTime;
 
     // Set the current date and time of the quiz
     @CsvDate()
