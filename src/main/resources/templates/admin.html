@@ -38,7 +38,7 @@
                             <div th:if="${#bools.isTrue(answer.married)}">Yes</div>
                             <div th:if="${#bools.isFalse(answer.married)}">No</div>
                         </td>
-                        <td class="td-bp" th:text="${answer.childAmount}"></td>
+                        <td class="td-bp" th:text="${answer.childrenAmount}"></td>
                         <td class="td-bp" th:text="${answer.salaryMonth}"></td>
                         <td class="td-bp" th:text="${#numbers.formatDecimal(answer.bodyTemp, 2, 'POINT', 1, 'COMMA')}">
                         </td>

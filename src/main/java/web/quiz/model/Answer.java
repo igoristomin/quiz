@@ -49,7 +49,7 @@ public class Answer {
 
     @Range(min = 0, max = 99, message = "* Enter a value between 0 and 99")
     @NotNull(message = "* Fill in the field")
-    private Byte childAmount;
+    private Byte childrenAmount;
 
     @Range(min = 0, max = 999999999, message = "* Enter a value between 0 and 999999999")
     @NotNull(message = "* Fill in the field")
