@@ -53,7 +53,7 @@ public class Answer {
 
     @Range(min = 0, max = 999999999, message = "* Enter a value between 0 and 999999999")
     @NotNull(message = "* Fill in the field")
-    private Integer salaryMonth;
+    private Integer salary;
 
     @Range(min = 32, max = 40, message = "* Enter a value between 32 and 40")
     @NotNull(message = "* Fill in the field")
