@@ -1,8 +1,8 @@
 # Quiz
 
 ## Description
-Conducting a quiz, issuing a list of answers in a readable form and exporting to CSV. Spring Security implements in
-memory authorization to view poll results.
+Conducting a quiz, issuing a list of answers in a readable form and exporting to CSV. Spring Security implements
+authorization in memory to view the quiz results.
 
 ## Used tools
 * Platform: Spring Boot 2.6.1
@@ -17,12 +17,12 @@ memory authorization to view poll results.
 * Security configuration: /src/main/java/web/quiz/config/SecurityConfig.java
 
 ## Frontend and backend schema
-![Element relationships](readme/front-back-schema.svg)
+![Relationships of elements](readme/front-back-schema.svg)
 
 ## Installation
 1. Create quiz database in PostgreSQL
-2. Run this project in development environment
-3. Open http://localhost:8081 in browser
+2. Run this project in a development environment
+3. Open http://localhost:8081 in the browser
 
 ## Release notes
 * Project type: Web application

@@ -70,11 +70,11 @@ public class MainController {
         // Set the file name
         final String fileName = "answers.csv";
 
-        // Set content type and header
+        // Set the content type and header
         response.setContentType("text/csv; charset=UTF-8");
         response.setHeader(HttpHeaders.CONTENT_DISPOSITION,"attachment; filename=" + fileName);
 
-        // Create CSV writer
+        // Create a CSV writer
         StatefulBeanToCsv<Answer> writer = new StatefulBeanToCsvBuilder<Answer>(response.getWriter())
                 .withQuotechar(CSVWriter.NO_QUOTE_CHARACTER)
                 .withSeparator(';')

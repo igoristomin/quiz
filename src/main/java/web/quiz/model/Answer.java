@@ -21,7 +21,7 @@ public class Answer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Size(min = 5, max = 30, message = "* Enter 5 to 30 characters")
+    @Size(min = 5, max = 30, message = "* Enter from 5 to 30 characters")
     @Pattern(regexp = "^([A-Z]{1}[a-z]{1,}\\s[A-Z]{1}[a-z]{1,})$",
             message = "* Must start with capital letters, contain only English letters and 1 space")
     @NotEmpty(message = "* Fill in the field")
@@ -29,12 +29,12 @@ public class Answer {
     private String fullName;
 
     @Pattern(regexp = "^([A-Za-z0-9_-]+\\.)*[A-Za-z0-9_-]+@[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*\\.[A-Za-z]{2,6}$",
-            message = "* Check if you entered it correctly")
+            message = "* Check that the input is correct")
     @NotEmpty(message = "* Fill in the field")
     @NotNull
     private String email;
 
-    @Pattern(regexp = "^\\+\\d{7,13}$", message = "* Must start with \"+\" and contain between 7 and 13 digits")
+    @Pattern(regexp = "^\\+\\d{7,13}$", message = "* Must start with \"+\" and contain from 7 to 13 digits")
     @NotEmpty(message = "* Fill in the field")
     @NotNull
     private String phoneNum;
@@ -47,15 +47,15 @@ public class Answer {
 
     private boolean married;
 
-    @Range(min = 0, max = 99, message = "* Enter a value between 0 and 99")
+    @Range(min = 0, max = 99, message = "* Enter a value from 0 to 99")
     @NotNull(message = "* Fill in the field")
     private Byte childrenAmount;
 
-    @Range(min = 0, max = 999999999, message = "* Enter a value between 0 and 999999999")
+    @Range(min = 0, max = 999999999, message = "* Enter a value from 0 and 999999999")
     @NotNull(message = "* Fill in the field")
     private Integer salary;
 
-    @Range(min = 32, max = 40, message = "* Enter a value between 32 and 40")
+    @Range(min = 32, max = 40, message = "* Enter a value from 32 and 40")
     @NotNull(message = "* Fill in the field")
     private Double bodyTemp = 36.6;
 
@@ -68,7 +68,7 @@ public class Answer {
     @NotNull
     private Calendar dateTimePassage = Calendar.getInstance();
 
-    // Convert email to lowercase and set
+    // Convert to lowercase and set email
     public void setEmail(String email) {
         this.email = email.toLowerCase();
     }
