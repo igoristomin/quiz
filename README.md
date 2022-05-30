@@ -22,7 +22,7 @@ authorization in memory to view the quiz results.
 ## Installation
 1. Create quiz database in PostgreSQL
 2. Run this project in a development environment
-3. Open http://localhost:8081 in the browser
+3. Open http://localhost:8080 in the browser
 
 ## Release notes
 * Project type: Web application
