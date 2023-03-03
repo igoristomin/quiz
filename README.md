@@ -27,5 +27,5 @@ authorization in memory to view the quiz results.
 ## Release notes
 * Project type: Web application
 * Date of release: 15 December 2021
-* Date of last update: 30 May 2022
-* Current version: 1.14
+* Date of last update: 3 March 2023
+* Current version: 1.15
