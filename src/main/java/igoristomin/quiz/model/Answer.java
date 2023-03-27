@@ -1,4 +1,4 @@
-package web.quiz.model;
+package igoristomin.quiz.model;
 
 import com.opencsv.bean.CsvDate;
 import lombok.Data;

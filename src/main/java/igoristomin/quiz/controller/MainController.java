@@ -1,4 +1,4 @@
-package web.quiz.controller;
+package igoristomin.quiz.controller;
 
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.StatefulBeanToCsv;
@@ -10,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import web.quiz.model.Answer;
-import web.quiz.repository.AnswerRepository;
+import igoristomin.quiz.model.Answer;
+import igoristomin.quiz.repository.AnswerRepository;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 import java.util.List;

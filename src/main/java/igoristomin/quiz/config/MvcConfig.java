@@ -1,4 +1,4 @@
-package web.quiz.config;
+package igoristomin.quiz.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
