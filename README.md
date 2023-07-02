@@ -7,7 +7,7 @@ authorization in memory to view the quiz results.
 ## Used tools
 * Platform: Spring Boot 2.6.1
 * Builder: Gradle 7.2
-* Databases: PostgreSQL 14.1
+* DBMS: PostgreSQL 14.1
 * Languages: Java SE 8u311, HTML5, CSS3
 
 ## Important files
