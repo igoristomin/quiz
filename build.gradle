@@ -19,7 +19,7 @@ repositories {
 }
 
 ext {
-    openCsvVersion = '5.5.2'
+    openCsvVer = '5.5.2'
 }
 
 dependencies {
@@ -29,7 +29,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-    implementation 'com.opencsv:opencsv:' + openCsvVersion
+    implementation 'com.opencsv:opencsv:' + openCsvVer
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
