@@ -15,9 +15,6 @@ authorization in memory to view the quiz results.
 * Application properties: /src/main/resources/application.properties
 * Security configuration: /src/main/java/web/quiz/config/SecurityConfig.java
 
-## Frontend and backend schema
-![Relationships of elements](readme/front-back-schema.svg)
-
 ## Installation
 1. Create quiz database in PostgreSQL
 2. Run this project in a development environment
